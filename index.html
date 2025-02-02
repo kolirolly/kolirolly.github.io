@@ -3,32 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rohit Koli's Portfolio - AI Developer & Web Designer">
+    <meta name="keywords" content="AI Developer, Web Developer, Portfolio, Rohit Koli">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 <body>
     <header>
         <a href="#" class="logo">Rollie Koli</a>
         <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#">Services</a>
-            <a href="#">Skills</a>
-            <a href="#">Education</a>
-            <a href="#">Experience</a>
-            <a href="#">Contact</a>
+            <a href="#home" class="active">Home</a>
+            <a href="#services">Services</a>
+            <a href="#skills-section">Skills</a> <!-- Update this link -->
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
-    <section class="home">
-        <div class="home-img">
-            <img src="main.jpg" alt="Profile Image">
-        </div>
+    
+    <section id="home" class="home">
         <div class="home-content">
             <h1>Hi, It's <span>Rohit</span></h1>
             <h3 class="typing-text">I'm a <span></span></h3>
-            <p>A passionate Artificial Intelligence student dedicated to creating innovative solutions
-                with expertise in Artificial Intelligence. I enjoy tackling complex challenges and delivering impactful results.
-            </p>
+            <p>A passionate Artificial Intelligence student dedicated to creating innovative solutions with expertise in Artificial Intelligence. I enjoy tackling complex challenges and delivering impactful results.</p>
             <div class="social-icons">
                 <a href="https://in.linkedin.com/in/rohit-koli-779532340" target="_blank">
                     <i class="fa-brands fa-linkedin"></i>
@@ -43,13 +42,124 @@
                     <i class="fa-brands fa-instagram"></i>
                 </a>
             </div>
-            <a href="#" class="btn">Hire me</a>
+            <a href="#contact" class="btn">Hire me</a>
+        </div>
+        <div class="home-img">
+            <img src="main.jpg" alt="Profile Image" loading="lazy">
         </div>
     </section>
+
+    <section id="services-section">
+        <h2>My Services</h2>
+        <div id="services">
+            <!-- Service card examples -->
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>Professional web design services.</p>
+            </div>
+            <div class="service-card">
+                <h3>AI Consulting</h3>
+                <p>AI and Machine Learning solutions.</p>
+            </div>
+            <div class="service-card">
+                <h3>Graphic Design</h3>
+                <p>Creative and modern graphic designs.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="skills-section">
+        <h2>My Skills</h2>
+        <div class="skills">
+            <!-- Skill Examples -->
+            <div class="skill">
+                <h3>Web Development</h3>
+                <div class="progress-bar">
+                    <div class="progress web"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>AI</h3>
+                <div class="progress-bar">
+                    <div class="progress ai"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h3>Python</h3>
+                <div class="progress-bar">
+                    <div class="progress python"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+
+    <section id="education">
+        <h2>My Education</h2>
+        <div class="education-items">
+            <!-- Education Example -->
+            <div class="education-item">
+                <h3>Bachelor's in Computer Science</h3>
+                <p>Dhempe College Of Arts And Science, 2022</p>
+            </div>
+            <div class="education-item">
+                <h3>Master's in Artificial Intelligence</h3>
+                <p>Goa University, 2025</p>
+            </div>
+            <!-- Add more items as needed -->
+        </div>
+    </section>
+    
+
+    <section id="experience">
+        <h2>My Experience</h2>
+        <div class="experience-items">
+            <!-- Experience Example -->
+            <div class="experience-item">
+                <h3>Software Developer Intern</h3>
+                <p>Audio Pustakam, 2023</p>
+            </div>
+            <div class="experience-item">
+                <h3>AI Research Intern</h3>
+                <p>coming soon</p>
+            </div>
+            <!-- Add more items as needed -->
+        </div>
+    </section>
+    
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <form action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
     <footer>
-        <center>
-            <h2>&copy; 2024 Rohit Koli. All rights reserved.</h2>
-        </center>
+        <p>© 2025 Rohit Koli. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
